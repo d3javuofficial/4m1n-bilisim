@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4M1N Bilişim Teknolojileri - Teklif & İhale Otomasyonu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <i class="fa-solid fa-microchip brand-icon"></i>
+                    <h2>4M1N <span>BİLİŞİM</span></h2>
+                </div>
+                <div class="brand-subtitle">Teklif Hazırlama Platformu</div>
+                
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active" data-page="dashboard"><i class="fa-solid fa-chart-pie"></i> Genel Bakış</a>
+                    <a href="#" class="nav-link" data-page="tenders"><i class="fa-solid fa-file-contract"></i> İhaleler & Şartname</a>
+                    <a href="#" class="nav-link" data-page="suppliers"><i class="fa-solid fa-truck-field"></i> Tedarikçiler</a>
+                    <a href="#" class="nav-link" data-page="audit"><i class="fa-solid fa-shield-halved"></i> Audit Log</a>
+                </nav>
+            </div>
+            <div class="user-panel">
+                <i class="fa-solid fa-user-gear avatar"></i>
+                <div class="user-info">
+                    <span class="username">4M1N Teklif Uzmanı</span>
+                    <span class="role">B2B Yönetici</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1 id="page-title">Genel Bakış</h1>
+                <button class="btn btn-primary" onclick="openModal()"><i class="fa-solid fa-plus"></i> Yeni İhale Ekle</button>
+            </header>
+
+            <section id="content-area" class="content-body">
+                <!-- Javascript dinamik yükleyecek -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal: Yeni İhale -->
+    <div id="tenderModal" class="modal">
+        <div class="modal-content">
+            <h2>Yeni İhale Kaydı Oluştur</h2>
+            <form id="tenderForm">
+                <label>İhale Numarası:</label>
+                <input type="text" id="tenderNumber" required placeholder="Örn: 2026/10450">
+                
+                <label>İhale Başlığı / Adı:</label>
+                <input type="text" id="tenderTitle" required placeholder="Örn: Sunucu Alım İhalesi">
+                
+                <label>Kurum:</label>
+                <input type="text" id="tenderInstitution" required placeholder="Örn: Ankara Büyükşehir Belediyesi">
+                
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:15px;">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
